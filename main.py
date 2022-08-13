@@ -1,30 +1,11 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[4]:
-
-
 import streamlit as st
 import pandas as pd
+from sklearn.preprocessing import  LabelEncoder
 import xgboost as xgb
 import numpy as np
-from matplotlib.backends.backend_pdf import PdfPages
-import matplotlib.pyplot as plt
-from datetime import date
-import sqlalchemy as sa
-import urllib
-from PIL import Image
-import scipy.stats as stats
-from pandas.api.types import CategoricalDtype
-from itertools import combinations
-from hyperopt import hp
-from hyperopt import fmin, tpe, STATUS_OK, STATUS_FAIL, Trials
-from sklearn.model_selection import cross_val_score
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import  LabelEncoder
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+
+bestandnaam= "data" +".xlsx"
+data = pd.read_excel (bestandnaam) #
 
 bestandnaam= "data" +".xlsx"
 data = pd.read_excel (bestandnaam) #
